@@ -1,0 +1,4 @@
+C:\Users\Faridun\Allif Academy\Day 13\obj\Debug\netcoreapp3.1\Day 13.csprojAssemblyReference.cache
+C:\Users\Faridun\Allif Academy\Day 13\obj\Debug\netcoreapp3.1\Day 13.csproj.CoreCompileInputs.cache
+C:\Users\Faridun\Allif Academy\Day 13\obj\Debug\netcoreapp3.1\Day 13.AssemblyInfoInputs.cache
+C:\Users\Faridun\Allif Academy\Day 13\obj\Debug\netcoreapp3.1\Day 13.AssemblyInfo.cs
