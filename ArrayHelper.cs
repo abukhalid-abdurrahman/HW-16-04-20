@@ -68,10 +68,42 @@ namespace Day_13
         ///<summary>
         ///Возвращает новый массив, содержащий копию части исходного массива.
         ///</summary>
-        public static T[] Slice(T[] array, int beginIndex, int endIndex)
+        public static T[] Slice(T[] array, int beginIndex = 0, int endIndex = 0)
         {
-            T[] newArray = {};
-            return newArray;
+            List<T> newArray = new List<T>();
+            int arrSize = array.Length;
+            if(endIndex == 0)
+                endIndex = array.Length;
+            if(beginIndex > array.Length - 1)
+                return newArray.ToArray();
+            else
+            {
+                if(beginIndex >= 0)
+                {
+                    if(endIndex > 0)
+                    {
+                        for(int i = beginIndex; i < endIndex; i++)
+                        {
+                            newArray.Add(array[i]);
+                        }
+                    }
+                    else if (endIndex < 0)
+                    {
+                        for(int i = beginIndex; i < (arrSize + endIndex); i++)
+                        {
+                            newArray.Add(array[i]);
+                        }
+                    }
+                }
+                else if(beginIndex < 0)
+                {
+                        for(int i = 0; i < (arrSize + beginIndex); i++)
+                        {
+                            newArray.Add(array[i]);
+                        }
+                }
+                return newArray.ToArray();
+            }
         }
 
         public static void Output(T[] arr)

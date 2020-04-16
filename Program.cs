@@ -17,13 +17,16 @@ namespace Day_13
                            "0. Выход\n";
                            
             Console.WriteLine("Здравстуйте! Вас приветствует редактор массива!");
-            Console.Write("Добавьте элементы в массив(через запятую, пример: Faridun,Firuz,Akmal,Rajab или введите '+' чтобы добавить в массив примерные элементы): ");
+            Console.Write("Добавьте элементы в массив(через запятую, пример: Faridun,Firuz или введите '+' чтобы добавить в массив примерные элементы): ");
 
             string cmd = string.Empty;
             cmd = Console.ReadLine(); 
 
             if(cmd == "+")
-                data = new string[4] { "Faridun", "Firuz", "Akmal", "Rajab" }; //Вводится примерные данные в массив
+            {
+                data = new string[8] { "Faridun", "Firuz", "Akmal", "Rajab", "Ramazon", "Fayz", "Andrey", "Vasya" }; //Вводится примерные данные в массив
+                ArrayHelper<string>.Output(data);
+            }
             else
                 data = cmd.Split(','); //Пользователь вводит данные в массив
 
@@ -57,7 +60,12 @@ namespace Day_13
                 }
                 else if(cmd == "5") //Slice
                 {
-
+                    Console.Write("Введите начало: ");
+                    int begin = int.Parse(Console.ReadLine());
+                    Console.Write("Введите конец: ");
+                    int end = int.Parse(Console.ReadLine());
+                    string[] newData = ArrayHelper<string>.Slice(data, begin, end);
+                    ArrayHelper<string>.Output(newData);
                 }
                 else if(cmd == "6") //Output
                 {
